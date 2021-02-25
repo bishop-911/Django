@@ -10,7 +10,7 @@ class DetailAdmin(admin.ModelAdmin):
 
 class Parent_DetailAdmin(admin.ModelAdmin):
 
-    list_display = ('name1', 'age', 'occupation')
+    list_display = ('parent_name', 'age', 'occupation')
     list_filter = ('age',)
 
 admin.site.register(Detail, DetailAdmin)

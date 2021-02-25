@@ -7,5 +7,29 @@
 {% block content %}
     <img src="{% static 'img/sample2.jpg' %}" alt="My image">
     <center><h1>WELCOME STUDENTS</h1></center>
+    <center>
+        <form method="POST">
+            <fieldset>
+                <legend>Student Details</legend>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <!-- Name:<input name="name"><br><br>
+            Roll Number:<input name="roll"><br><br>
+            Class:<input name="cls"><br><br> -->
+            </fieldset>
+        
+            <fieldset>
+                <legend>Parent Details</legend>
+            {% csrf_token %}
+            {{ form1.as_p }}
+
+            
+            </fieldset>
+            <button type="submit" value="Post">ADD</button>
+            <button type="submit">SHOW DETAILS</button>
+            
+        </form>
+    
+    </center>
 
 {% endblock %}

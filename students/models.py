@@ -1,3 +1,4 @@
+
 from django.db import models
 
 # Create your models here.
@@ -16,10 +17,10 @@ class Detail(models.Model):
 
 class Parent_Detail(models.Model):
 
-    name1 = models.CharField(max_length=255)
+    parent_name = models.CharField(max_length=255)
     age = models.IntegerField()
     occupation = models.CharField(max_length=255)
 
 
     def __str__(self):
-        return self.name1
+        return self.name
