@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table>
+        <p>Student details are as follows - </p>
+            <tr>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Class</th>
+            </tr>
+        <br>
+        <br>
+            
+        {% for value in data %}
+            <tr>
+                <td>{{ value.name }}</td>
+                <td>{{ value.roll_number }}</td>
+                <td>{{ value.class_standard }}</td>
+                <br>
+                
+            </tr>
+            
+        {% endfor %}
+    </table>    
+{% endblock %}

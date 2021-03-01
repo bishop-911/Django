@@ -23,4 +23,4 @@ class Parent_Detail(models.Model):
 
 
     def __str__(self):
-        return self.name
+        return self.parent_name
