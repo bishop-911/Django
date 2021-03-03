@@ -1,6 +1,5 @@
 from django import forms
-from .models import Detail
-from .models import Parent_Detail
+from .models import Detail, Parent_Detail, Login_Detail
  
 class MyForm(forms.ModelForm):
   class Meta:
@@ -17,3 +16,11 @@ class MyForm1(forms.ModelForm):
     model = Parent_Detail
     fields = ["parent_name", "age", "occupation",]
     labels = {'parent_name': "Father's Name", 'age': "Age", 'occupation':"Occupation",}
+
+
+class LoginForm(forms.ModelForm):
+  class Meta:
+
+    model = Login_Detail
+    fields = ["username", "password",]
+    labels = {'username': "username", 'password': "password",}

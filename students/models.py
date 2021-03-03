@@ -24,3 +24,9 @@ class Parent_Detail(models.Model):
 
     def __str__(self):
         return self.parent_name
+
+
+class Login_Detail(models.Model):
+
+    username = models.CharField(max_length=255)
+    password = models.CharField(max_length=255)
